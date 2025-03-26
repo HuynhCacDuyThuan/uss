@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import logo from './logo.svg'; // Nếu không dùng, có thể xóa
 import './App.css';
+
+import Slider from './component/Slider';
+import Header from './component/header';
+import About from './component/about';
+import FeaturedProducts from './component/FeaturedProducts';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="content-wrapper">
+        <Slider />
+        <About/>
+        <FeaturedProducts/>
+      </div>
     </div>
   );
 }
